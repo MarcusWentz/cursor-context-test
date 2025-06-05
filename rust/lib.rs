@@ -24,6 +24,7 @@ pub trait RouterAPI {
     // Make sure type interfaces are defined here or else there will be a compiler error.
     fn rust_string(&self) -> String;
     fn rust_uint256(&self) -> U256;
+    // fn rust_uint256(&self) -> u32;
     fn rust_int256(&self) -> I256;
     fn rust_address(&self) -> Address;
     fn rust_bytes(&self) -> Bytes;
@@ -45,7 +46,9 @@ impl<SDK: SharedAPI> RouterAPI for ROUTER<SDK> {
 
     #[function_id("rustUint256()")]
     fn rust_uint256(&self) -> U256 {
+    // fn rust_uint256(&self) -> u32 {
         let uint256_test = U256::from(10);
+        // let uint256_test = 10;
         return uint256_test;
     }
 
