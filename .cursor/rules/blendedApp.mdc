@@ -1,0 +1,1 @@
+- Always have the Rust contract return an EVM type to the Solidity contract based on EVM types in Rust library alloy.rs
