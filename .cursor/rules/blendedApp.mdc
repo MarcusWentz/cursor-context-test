@@ -13,4 +13,5 @@
     ```rust
     impl<SDK: SharedAPI> RouterAPI for ROUTER<SDK> 
     ```
+- Rust contracts are compiled to a WASM binary, then deployed to Fluent from the WASM binary
 - More info on Fluent and Blended smart contracts can be indexed in these docs `https://docs.fluent.xyz/`
