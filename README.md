@@ -82,7 +82,37 @@ Foundry test fork deployed contracts on Fluent testnet
 forge coverage --fork-url https://rpc.dev.gblend.xyz/
 ```
 
-## Test Frontend Website Locally
+### Step 3 - Test Javascript ethers.js Interaction
+
+Switch back to the root of this repo, then switch to the `javascript` folder
+
+```shell
+cd ../
+cd javascript
+```
+
+Install packages such as ethers.js with `package.json` with
+
+```shell
+npm i
+```
+
+Run the ethers.js test script to have the Solidity contract call the Rust contract
+
+```shell
+node solidity.js
+```
+
+Run the ethers.js test script to call the Rust contract directly (using Solidity interface ABI)
+
+```shell
+node rust.js
+```
+
+This ethers.js Javascript example can be 
+modified from node.js to a frontend application for users to interact with.
+
+## Step 4: Test Frontend Website Locally
 
 Run locally for testing with:
 
