@@ -1,6 +1,16 @@
 - Smart contract files located in the following paths:
-    -Rust path: (`rust`) 
-    -Solidity path: (`solidity/src`) 
+    - Rust path: (`rust`) 
+    - Solidity path: (`solidity/src`) 
 - Rust contracts are under file lib.rs
 - Solidity contracts are .sol files
 - Always have the Rust contract return an EVM type to the Solidity contract based on EVM types in Rust library alloy.rs
+- Rust contract structure define Solidity:
+    - Interfaces:
+    ```rust
+    pub trait RouterAPI
+    ```
+    - Function implementations:
+    ```rust
+    impl<SDK: SharedAPI> RouterAPI for ROUTER<SDK> 
+    ```
+- More info on Fluent and Blended smart contracts can be indexed in these docs `https://docs.fluent.xyz/`
