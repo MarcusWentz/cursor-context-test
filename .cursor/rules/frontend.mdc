@@ -1,0 +1,10 @@
+- The frontend files are located in the root of this project in files:
+    -index.html
+    -index.js
+    -index.css
+    -favicon.ico
+- To interact with EVM smart contracts, the frontend imports Javascript npm library ethers.js in index.html here:
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.0/ethers.umd.min.js" type="text/javascript"></script>
+```
+- The frontend allows users to connect with Metamask for reading and writing to the Fluent test network. 

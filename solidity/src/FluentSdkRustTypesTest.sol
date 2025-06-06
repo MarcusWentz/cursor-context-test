@@ -14,10 +14,19 @@ interface IFluentRust {
 
 contract FluentSdkRustTypesTest {
     
+    uint256 public storedData; //Do not set 0 manually it wastes gas!
+
     IFluentRust public fluentRust;
 
+    event setEvent();
+    
     constructor(address FluentRustAddress) {
         fluentRust = IFluentRust(FluentRustAddress);
+    }
+    
+    function set(uint256 x) public {
+        storedData = x;
+        emit setEvent();
     }
 
     function getRustString() external view returns (string memory) {
